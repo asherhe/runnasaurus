@@ -2,7 +2,7 @@
 
 A terminal-based clone of the Chrome dino game in C#
 
-<!-- TODO: screenshot -->
+![screenshot](https://github.com/asherhe/runnasaurus/blob/main/img/screenshot.png)
 
 > **Note**
 > 
