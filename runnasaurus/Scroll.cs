@@ -19,12 +19,12 @@ namespace runnasaurus
     public bool get(int index) => ((contents >> index) & 1) == 1;
     public void set(int index, int val)
     {
+      contents &= (UInt32)~(1 << index);
       contents |= (UInt32)val << index;
     }
 
-    public void advance()
-    {
-      contents <<= 1;
-    }
+    public void advance(int n) => contents >>= n;
+
+    public void advance() => advance(1);
   }
 }
