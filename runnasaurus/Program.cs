@@ -76,8 +76,8 @@ namespace runnasaurus
 
     static void Main(string[] args)
     {
-      Dictionary<string, Keyboard.KeyCode[]> keyBindings = new Dictionary<string, Keyboard.KeyCode[]>();
-      keyBindings["jump"] = new Keyboard.KeyCode[] { Keyboard.KeyCode.SPACE, Keyboard.KeyCode.W, Keyboard.KeyCode.UP };
+      Dictionary<string, ConsoleKey[]> keyBindings = new Dictionary<string, ConsoleKey[]>();
+      keyBindings["jump"] = new ConsoleKey[] { ConsoleKey.Spacebar, ConsoleKey.W, ConsoleKey.UpArrow };
 
       InputManager inputManager = new InputManager(keyBindings);
 
