@@ -8,21 +8,21 @@ namespace runnasaurus
 {
   internal class InputManager
   {
-    public Dictionary<String, Keyboard.KeyCode[]> keyBindings;
+    public Dictionary<String, ConsoleKey[]> keyBindings;
     public InputManager()
     {
-      keyBindings = new Dictionary<String, Keyboard.KeyCode[]>();
+      keyBindings = new Dictionary<String, ConsoleKey[]>();
     }
 
-    public InputManager(Dictionary<String, Keyboard.KeyCode[]> keyBindings)
+    public InputManager(Dictionary<String, ConsoleKey[]> keyBindings)
     {
       this.keyBindings = keyBindings;
     }
 
     public bool getInput(String key)
     {
-      foreach (Keyboard.KeyCode k in keyBindings[key])
-        if (Keyboard.getKey(k)) return true;
+      foreach (ConsoleKey k in keyBindings[key])
+        if (Keyboard.GetKey(k)) return true;
       return false;
     }
   }
