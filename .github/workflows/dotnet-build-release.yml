@@ -22,3 +22,6 @@ jobs:
         
     - name: Build Release
       run: dotnet build --configuration Release
+
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
